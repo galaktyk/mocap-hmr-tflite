@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import ctypes
 
+
 JOINTS_NAME = ['Ankle.R_x', 'Ankle.R_y', 'Ankle.R_z',
             'Knee.R_x', 'Knee.R_y', 'Knee.R_z',
             'Hip.R_x', 'Hip.R_y', 'Hip.R_z',
@@ -59,7 +60,13 @@ class BVHExporter:
         concatenated_df.to_csv(csv_path, index=False)
 
         # Python subprocess script that run Blender that run Python script with Blender's python API.
-        try:
-            subprocess.call(['blender', '--background', 'blender_scripts/csv_to_bvh.blend', '-noaudio', '-P', 'blender_scripts/csv_to_bvh.py', '--', csv_path, bvh_path], shell=True)
-        except:         
+        proc = subprocess.Popen(['blender', '--background', 'blender_scripts/csv_to_bvh.blend', '-noaudio', '-P', 'blender_scripts/csv_to_bvh.py', '--', csv_path, bvh_path], shell=True)
+        proc.wait()
+        (stdout, stderr) = proc.communicate()
+        
+        if proc.returncode != 0:
             ctypes.windll.user32.MessageBoxW(0,  u"Blender not found, install Blender and add to your PATH first.",u"Error", 0)
+        else:
+            print("[INFO] Success.")
+        
+    
