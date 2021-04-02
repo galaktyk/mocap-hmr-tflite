@@ -21,4 +21,4 @@ python run.py
 ```
 
 ## Release
-[win64_v20210402.zip](https://drive.google.com/file/d/1zB9l76vJ-lit0HDBrnpPL4Y74DEMaBfG/view?usp=sharing)
+[win64_v20210402.zip](https://drive.google.com/file/d/1CsPTK0ao8x_k90SzotRFQnMgWNSrCN2n/view?usp=sharing)
