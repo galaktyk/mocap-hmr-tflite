@@ -21,4 +21,5 @@ python run.py
 ```
 
 ## Release
+* add blender directory in to your PATH before running.
 [win64_v20210402.zip](https://drive.google.com/file/d/1CsPTK0ao8x_k90SzotRFQnMgWNSrCN2n/view?usp=sharing)
