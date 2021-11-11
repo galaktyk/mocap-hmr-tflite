@@ -28,7 +28,7 @@ python run.py
 ```
 
 ## Notice
-This website will no longer be updated.  
+This repo will no longer be updated.  
 I recommend using these instead.  
 https://github.com/facebookresearch/frankmocap  
 https://google.github.io/mediapipe/solutions/holistic.html
